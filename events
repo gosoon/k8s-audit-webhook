@@ -1,0 +1,80 @@
+{
+  "kind": "EventList",
+  "apiVersion": "audit.k8s.io/v1beta1",
+  "Items": [
+    {
+      "Level": "Request",
+      "AuditID": "793e7ae2-5ca7-4ad3-a632-19708d2f8265",
+      "Stage": "RequestReceived",
+      "RequestURI": "/api/v1/namespaces/default/pods/test-pre-sf-de7cc-0",
+      "Verb": "get",
+      "User": {
+        "Username": "system:unsecured",
+        "UID": "",
+        "Groups": [
+          "system:masters",
+          "system:authenticated"
+        ],
+        "Extra": null
+      },
+      "ImpersonatedUser": null,
+      "SourceIPs": [
+        "127.0.0.1"
+      ],
+      "UserAgent": "kube-scheduler/v1.12.2 (linux/amd64) kubernetes/73f3294/scheduler",
+      "ObjectRef": {
+        "Resource": "pods",
+        "Namespace": "default",
+        "Name": "test-pre-sf-de7cc-0",
+        "UID": "",
+        "APIGroup": "",
+        "APIVersion": "v1",
+        "ResourceVersion": "",
+        "Subresource": ""
+      },
+      "ResponseStatus": null,
+      "RequestObject": null,
+      "ResponseObject": null,
+      "RequestReceivedTimestamp": "2019-01-11T06:51:43.528703Z",
+      "StageTimestamp": "2019-01-11T06:51:43.528703Z",
+      "Annotations": null
+    },
+    {
+      "Level": "Request",
+      "AuditID": "8b6cd79a-9ffe-4da6-b752-aa3d415755ae",
+      "Stage": "RequestReceived",
+      "RequestURI": "/api/v1/namespaces/default/pods/gstop1-sf-1f2db-1",
+      "Verb": "get",
+      "User": {
+        "Username": "system:unsecured",
+        "UID": "",
+        "Groups": [
+          "system:masters",
+          "system:authenticated"
+        ],
+        "Extra": null
+      },
+      "ImpersonatedUser": null,
+      "SourceIPs": [
+        "127.0.0.1"
+      ],
+      "UserAgent": "kube-scheduler/v1.12.2 (linux/amd64) kubernetes/73f3294/scheduler",
+      "ObjectRef": {
+        "Resource": "pods",
+        "Namespace": "default",
+        "Name": "gstop1-sf-1f2db-1",
+        "UID": "",
+        "APIGroup": "",
+        "APIVersion": "v1",
+        "ResourceVersion": "",
+        "Subresource": ""
+      },
+      "ResponseStatus": null,
+      "RequestObject": null,
+      "ResponseObject": null,
+      "RequestReceivedTimestamp": "2019-01-11T06:52:05.618821Z",
+      "StageTimestamp": "2019-01-11T06:52:05.618821Z",
+      "Annotations": null
+    }
+  ]
+}

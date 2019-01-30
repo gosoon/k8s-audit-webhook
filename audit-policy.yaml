@@ -1,0 +1,25 @@
+# Log all requests at the Metadata level.
+apiVersion: audit.k8s.io/v1
+kind: Policy
+# ResponseStarted 阶段不记录
+omitStages:
+  - "ResponseStarted"
+rules:
+  # 记录用户对 pod 和 statefulset 的操作
+  - level: RequestResponse
+    resources:
+    - group: ""
+      resources: ["pods","pods/status"]
+    - group: "apps"
+      resources: ["statefulsets","statefulsets/scale"]
+  # kube-controller-manager、kube-scheduler 等已经认证过身份的请求不需要记录
+  - level: None  
+    userGroups: ["system:authenticated"]
+    nonResourceURLs:
+    - "/api*" 
+    - "/version"
+  # 对 config、secret、token 等认证信息不记录请求体和返回体
+  - level: Metadata
+    resources:
+    - group: "" # core API group
+      resources: ["secrets", "configmaps"]

@@ -1,0 +1,42 @@
+{
+  "operate": 100001,
+  "data": {
+    "Region": "aliyun",
+    "Level": "Request",
+    "AuditID": "5bab8618-2d58-4f8a-a30e-cc1a69724f11",
+    "Stage": "RequestReceived",
+    "RequestURI": "/api/v1/namespaces/default/pods/rt-test-sf-e00e6-0",
+    "Verb": "get",
+    "User": {
+      "Username": "system:unsecured",
+      "UID": "",
+      "Groups": [
+        "system:masters",
+        "system:authenticated"
+      ],
+      "Extra": null
+    },
+    "ImpersonatedUser": null,
+    "SourceIPs": [
+      "127.0.0.1"
+    ],
+    "UserAgent": "kube-scheduler/v1.12.2 (linux/amd64) kubernetes/73f3294/scheduler",
+    "ObjectRef": {
+      "Resource": "pods",
+      "Namespace": "default",
+      "Name": "rt-test-sf-e00e6-0",
+      "UID": "",
+      "APIGroup": "",
+      "APIVersion": "v1",
+      "ResourceVersion": "",
+      "Subresource": ""
+    },
+    "ResponseStatus": null,
+    "RequestObject": null,
+    "ResponseObject": null,
+    "RequestReceivedTimestamp": "2019-01-16T08:39:45.652352Z",
+    "StageTimestamp": "2019-01-16T08:39:45.652352Z",
+    "Annotations": null,
+    "TimeStamp": "1547628013899"
+  }
+}
